@@ -1,0 +1,22 @@
+{
+  "name": "gh-action-16",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx http-server pages"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexKamaev/gh-action-16.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexKamaev/gh-action-16/issues"
+  },
+  "homepage": "https://github.com/AlexKamaev/gh-action-16#readme",
+  "dependencies": {
+    "http-server": "^0.12.3"
+  }
+}

@@ -1,0 +1,16 @@
+name: tests
+on: [push]
+
+jobs:
+  test:
+    name: tests
+    runs-on: windows-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v1
+      - name: Npm install
+        run: npm install
+      - name: Testcafe action
+        uses: DevExpress/testcafe-action@latest
+        with:
+          args: chrome tests --app "npm run start"
