@@ -10,7 +10,5 @@ jobs:
         uses: actions/checkout@v1
       - name: Npm install
         run: npm install
-      - name: Testcafe action
-        uses: DevExpress/testcafe-action@latest
-        with:
-          args: chrome tests --app "npm run start"
+      - name: Run TestCafe
+        run : npm test
