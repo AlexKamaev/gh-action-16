@@ -1,6 +1,23 @@
+import { ClientFunction } from 'testcafe';
+
+const getWindowDimensionsInfo = ClientFunction(() => {
+   return {
+      innerWidth:      window.innerWidth,
+      innerHeight:     window.innerHeight,
+      outerWidth:      window.outerWidth,
+      outerHeight:     window.outerHeight,
+      availableHeight: screen.availHeight,
+      availableWidth:  screen.availWidth
+   };
+});
+
 fixture `tests`
     .page `http://localhost:8080`;
 
-test('click', async t => {
-   await t.click('h1');
+test('resize', async t => {
+   console.log(await getWindowDimensionsInfo());
+
+   await t.resizeWindow(500, 500);
+
+   console.log(await getWindowDimensionsInfo());
 });
