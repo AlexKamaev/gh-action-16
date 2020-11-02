@@ -17,7 +17,7 @@ fixture `tests`
 test('resize', async t => {
    console.log(await getWindowDimensionsInfo());
 
-   await t.resizeWindow(500, 500);
+   await t.resizeWindow(600, 600);
 
    console.log(await getWindowDimensionsInfo());
 });
