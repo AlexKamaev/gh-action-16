@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "npx http-server pages",
-    "test": "node ./node_modules/testcafe/bin/testcafe chrome tests --app \"npm run start\" --app-init-delay 10000"
+    "test": "node ./node_modules/testcafe/bin/testcafe chrome tests --app \"npm run start\" --app-init-delay 10000",
+    "test-linux": "xvfb-run --server-args=\"-screen 0 1280x720x24\" \"npm test\""
   },
   "repository": {
     "type": "git",
@@ -22,3 +23,4 @@
     "testcafe": "^1.9.4"
   }
 }
+

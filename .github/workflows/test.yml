@@ -8,9 +8,7 @@ jobs:
     steps:
       - name: Check out the repository
         uses: actions/checkout@v1
-      - name: xvfb
-        run: xvfb-run --server-args="-screen 0 1280x720x24";
       - name: Npm install
         run: npm install
       - name: Run TestCafe
-        run : npm test
+        run : npm run test-linux
